@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <div class="container">
+
+      {% if session %}
+      <h1>Welcome to Formation Scout!</h1>
+      {% else %}
+      <h1>Welcome, Guest</h1>
+      <h5><a href="{% url 'login' %}">Login</a></h5>
+      {% endif %}
+
+      <section>
+        <h3>Use machine learning to help learn football!</h3>
+        <p>
+          Formation Scout is a free tool to help its users learn more about football through identifying
+          some base offensive formations. This is done through uploading a broadcast image from a game
+          to the <a href="{% url 'upload' %}" style="color: black;">Scout App</a>, from there the image is sent to a trained machine learning image classification model
+          where it identifies the formations and returns an annotated image to you. Interested? All you need
+          to access it is an account with Formation Scout.
+          {% if session %}
+          {% else %}
+
+            <a href="{% url 'login' %}">Login </a>
+
+          {% endif %}
+
+        </p>
+      </section>
+
+      <P>
+        More resources on formations: <br>
+        <a href="https://en.wikipedia.org/wiki/List_of_formations_in_American_football" target="_blank">
+          Wikipedia list of offensive formations</a>
+
+
+      </P>
+    </div>
+
+{% endblock %}

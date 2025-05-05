@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+  <div class="container">
+    <section>
+      <h2  style="text-align: center; font-weight: bold;" >The I Formation</h2>
+
+      <h3>What is the I Formation?</h3>
+      <p>The <strong>I Formation</strong> is one of the most classic and recognizable offensive alignments in football.
+        In the I, the quarterback lines up under center, with a fullback positioned directly behind the QB,
+        and a running back (tailback) lined up behind the fullback — forming a straight line resembling the letter "I".
+        The I Formation emphasizes power running and play-action passing, making it a staple at all levels of football for decades.
+      </p>
+
+
+      {% load static %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <img src="{% static 'images/iformationEXgreen.png' %}" class="img-fluid mb-3" alt="I Formation diagram">
+            <p class="text-center">The Diagram shows where positions are lined up in the traditional I formation.</p>
+            <p class="text-center">The annotated game image shows an in-game example.
+              Notice the HB is behind the FB, who is behind the QB who is under center.
+            </p>
+
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/iformationEX.jpeg' %}" class="img-fluid" alt="Annotated I Formation">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>Key Features of the I Formation</h3>
+      <ul>
+        <li><strong>Quarterback Under Center:</strong> The QB is directly behind the center for quicker handoffs and fakes.</li>
+        <li><strong>Fullback and Tailback:</strong> The fullback acts as a lead blocker, while the tailback is the primary ball carrier.</li>
+        <li><strong>Power Running Game:</strong> The formation is built for north-south, between-the-tackles running.</li>
+        <li><strong>Play-Action Capability:</strong> Defenses expecting the run can be easily fooled by play-action passes downfield.</li>
+      </ul>
+    </section>
+
+    <section>
+        <h3>I Formation Variations</h3>
+        <p>The I Formation has multiple variants that adjust personnel or alignments to create different looks.
+          Two common variations tracked by the scout app are <strong>Offset I</strong> and <strong>Power I</strong>.
+          Offset I shifts the fullback a couple yards to either side of the line and Power I adds another Fullback to
+          the backfield.
+        </p>
+
+        <!-- display images for the two varients of the I formation -->
+        {% load static %}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-flex flex-column">
+              <figure>
+                <img src="{% static 'images/offsetiEX.jpeg' %}" class="img-fluid" alt="Annotated offset I Formation">
+                <figcaption style="text-align: center">The 'Offset' variant of the I Formation <br> Notice the FB shifted up</figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure>
+                <img src="{% static 'images/poweriEX.jpeg' %}" class="img-fluid" alt="Annotated power I Formation">
+                <figcaption style="text-align: center">The 'Power' variant of the I Formation <br>
+                  Notice the 2nd FB added in the backfield</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+    </section>
+
+      <section>
+      <h3>Why Teams Use the I Formation</h3>
+      <p>The I Formation provides a solid foundation for physical football.
+        Its structure allows offenses to:</p>
+      <ul>
+        <li>Dominate at the line of scrimmage with a powerful running game</li>
+        <li>Control the clock by establishing long drives</li>
+        <li>Use play-action passing effectively against aggressive defenses</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Common Plays from the I Formation</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=9iUT7-kdSIc&ab_channel=PhiladelphiaEagles" target="_blank">
+          <strong>Iso (Isolation) Run:</strong></a>
+          The fullback leads through the hole to clear a path for the running back.
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=_WXKHRTSMm4&ab_channel=NFL" target="_blank">
+          <strong>Play-Action Pass:</strong></a>
+          Faking the run to set up a deep throw, taking advantage of defenses overcommitting to stop the run.
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=5PtWs6Oxnvg&ab_channel=JoeDanielFootball" target="_blank">
+          <strong>Power Off-Tackle:</strong></a>
+          A classic downhill run aimed at overpowering the defensive edge.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Final Thoughts</h3>
+      <p>The I Formation remains a symbol of power football.
+         Even as offenses evolve toward spread concepts, many teams still rely on the I when they need to grind out tough yards or control a game’s tempo.
+      </p>
+      <p>For players, coaches, and fans, understanding the I Formation is crucial to appreciating how the running game can dictate the pace and physicality of a football game.</p>
+    </section>
+    <a href="#top">back to top</a>
+  </div>
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+  <div class="container">
+    <section>
+      <h2  style="text-align: center; font-weight: bold;" >The Shotgun Formation</h2>
+
+      <h3>What is the Shotgun Formation?</h3>
+      <p>The <strong>Shotgun Formation</strong> is a classic offensive alignment where the quarterback lines up about 5–7 yards behind the center at the snap.
+        This setup gives the quarterback more time to see the defense and make quick decisions, especially for passing plays.
+        Originally popularized in professional football in the 1960s by coaches like Tom Landry of the Dallas Cowboys,
+        the shotgun has become a staple at all levels of football due to its flexibility and effectiveness in the passing game.
+      </p>
+
+
+      {% load static %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <img src="{% static 'images/shotgunEXgreen.png' %}" class="img-fluid mb-3" alt="diagram of shotgun formation">
+            <p class="text-center">The Diagram shows where positions are lined up in a traditional shotgun formation.</p>
+            <p class="text-center">The annotated game image shows an in-game example.
+              Notice the HB is beside the QB, who is in shotgun behind the center.
+            </p>
+
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/shotgunEX.jpeg' %}" class="img-fluid" alt="Annotated Shotgun Formation">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>Key Features of the Shotgun Formation</h3>
+      <ul>
+        <li><strong>Quarterback Depth:</strong> The QB stands farther back (5–7 yards) allowing for more time to process the defense and set up passing plays.</li>
+        <li><strong>Emphasis on Passing:</strong> The shotgun is primarily used to aid the passing game by giving the QB a clear view of the defense.</li>
+        <li><strong>Running Game Options:</strong> Despite its reputation, teams can still run the ball effectively out of the shotgun with draws, RPOs, and zone-read plays.</li>
+        <li><strong>Wide Formations:</strong> Often paired with multiple wide receivers to stretch the defense horizontally and create mismatches.</li>
+      </ul>
+    </section>
+
+    <section>
+        <h3>Shotgun Variations</h3>
+        <p>The Shotgun Formation has a couple variations that are tracked by the scout app, they are the traditional
+          look shown above and <strong>Shotgun Max</strong>, which is when the QB has an RB on both of his sides.
+          This is often done to provide extra pass protection on passing plays or create more deception by adding
+          another player the QB could hand the ball off to on running plays.
+        </p>
+
+        <!-- display images for the two varients of the shotgun formation -->
+        {% load static %}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-flex flex-column">
+              <figure>
+                <img src="{% static 'images/shotgunEX2.jpeg' %}" class="img-fluid" alt="Annotated Pistol Strong Formation">
+                <figcaption style="text-align: center">The 'Standard' variant of the shotgun Formation</figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure>
+                <img src="{% static 'images/shotgunmaxEX.png' %}" class="img-fluid" alt="Annotated Pistol Full Formation">
+                <figcaption style="text-align: center">The 'Max' variant of the Shotgun Formation</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section>
+      <h3>Why Teams Use the Shotgun</h3>
+      <p>The Shotgun Formation gives offenses a major advantage by improving the quarterback’s ability to read the defense and react quickly.
+        With the QB already set deeper, the offense can:</p>
+      <ul>
+        <li>Attack defenses with quick, short passes</li>
+        <li>Stretch the field both horizontally and vertically</li>
+        <li>Improve protection against blitzes and pressure</li>
+        <li>Utilize the quarterback as a running threat on draws and read-options</li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h3>Common Plays from the Shotgun</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=2acy4Mz92SE&ab_channel=CoachRossFootball" target="_blank">
+          <strong>Quick Slant Routes:</strong></a>
+          Fast, timing-based passes that exploit soft zones and blitzes.
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=lJpnYGf4ybs&ab_channel=ChalkTalkFootball" target="_blank">
+          <strong>Zone Read Runs:</strong></a>
+          Allow the QB to read the defensive end and either hand the ball off or keep it himself.
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=rBdLMtuoq8g&ab_channel=AmericanFootballAcademy" target="_blank">
+          <strong>Four Verticals:</strong></a>
+          A vertical passing attack designed to stretch defenses deep downfield.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Final Thoughts</h3>
+      <p>The Shotgun Formation has revolutionized modern football by emphasizing speed, spacing, and flexibility.
+         Whether attacking with quick passes, deep shots, or creative runs,
+         the shotgun allows offenses to stay aggressive and adapt to nearly any defensive look.
+      </p>
+      <p>By understanding the shotgun, fans and players alike can better appreciate the strategies and adjustments happening before the snap every week.</p>
+    </section>
+    <a href="#top">back to top</a>
+  </div>
+</body>
+
+
+{% endblock %}

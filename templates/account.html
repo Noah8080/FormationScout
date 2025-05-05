@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <div class="container">
+
+      {% if session %}
+      <h1>Welcome, {{display_name}}!</h1>
+      <p><a href="{% url 'logout' %}">Logout</a></p>
+      <p>
+        Email: {{user_email}} <br>
+        Display Name: {{display_name}} <br>
+        Email verification status: {{email_verify}} <br>
+        Account last updated at: {{last_update}}
+      </p>
+      {% else %}
+      <h1>Welcome, Guest</h1>
+      <p><a href="{% url 'login' %}">Login</a></p>
+      {% endif %}
+
+      <P>
+        More resources on formations: <br>
+        <a href="https://en.wikipedia.org/wiki/List_of_formations_in_American_football" target="_blank">
+          Wikipedia list of offensive formations</a>
+
+
+      </P>
+    </div>
+
+{% endblock %}

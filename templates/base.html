@@ -1,0 +1,98 @@
+
+<html>
+      <head>
+        <meta charset="utf-8" />
+        <title>Formation Scout</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+              crossorigin="anonymous"
+        >
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      </head>
+      <body style="padding-top:  7em;">
+
+
+        <!-- start nav bar -->
+        <header class="fixed-top" style="">
+          <!-- banner -->
+          <h1 style="background-color: aquamarine;
+                font-family: 'roboto';
+                font-weight: bold;
+                letter-spacing: 1.7px;
+                margin: 0;
+                padding: .25em;
+                text-align: center;">
+                Formation Scout
+          </h1>
+          <!-- nav bar links -->
+          <nav style="background-color: #333; color: white; padding: 0.5em; ">
+          <div style="display: flex; justify-content: space-between; align-items: center;" class="container">
+
+            <div>
+              <a href="{% url 'home' %}" style="color: white; margin-right: 1em; text-decoration: none;">Home</a>
+              <a href="{% url 'about' %}" style="color: white; margin-right: 1em; text-decoration: none;">About</a>
+              <a href="{% url 'upload' %}" style="color: white; margin-right: 1em; text-decoration: none;">Scout App</a>
+              <a href="{% url 'account' %}" style="color: white; margin-right: 1em; text-decoration: none;">Account</a>
+                    <!-- Dropdown container -->
+              <div style="position: relative; display: inline-block;">
+                <a href="{% url 'formations' %}" style="color: white; text-decoration: none;">Formations</a>
+                <div style="display: none; position: absolute; background-color: #444;
+                     min-width: 150px; z-index: 1; padding: 0.5em;" class="dropdown-content">
+                  <a href="{% url 'shotgun' %}" style="color: white;
+                    text-decoration: none; display: block; padding: 0.25em 0;">Shotgun</a>
+                  <a href="{% url 'i' %}" style="color: white;
+                    text-decoration: none; display: block; padding: 0.25em 0;">I-Formation</a>
+                  <a href="{% url 'pistol' %}" style="color: white; text-decoration: none; display: block; padding: 0.25em 0;">Pistol</a>
+                  <a href="{% url 'empty' %}" style="color: white;
+                    text-decoration: none; display: block; padding: 0.25em 0;">Empty</a>
+                  <a href="{% url 'singleback' %}" style="color: white;
+                    text-decoration: none; display: block; padding: 0.25em 0;">Singleback</a>
+                </div>
+              </div>
+
+              <!-- Dropdown hover script -->
+              <script>
+                const dropdown = document.querySelector('nav div[style*="position: relative;"]');
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+                dropdown.addEventListener('mouseover', () => {
+                  dropdownContent.style.display = 'block';
+                });
+                dropdown.addEventListener('mouseout', () => {
+                  dropdownContent.style.display = 'none';
+                });
+              </script>
+
+            </div>
+
+            <div>
+              {% if session %}
+                <span style="margin-right: 1em;">
+                  <a href="{% url 'account' %}" style="color: white; text-decoration: none;">
+                    Welcome, {{ display_name }}!
+                  </a>
+                </span>
+                <a href="{% url 'logout' %}" style="color: white; text-decoration: none;">Logout</a>
+              {% else %}
+                <span style="margin-right: 1em;">Welcome, Guest</span>
+                <a href="{% url 'login' %}" style="color: white; text-decoration: none;">Login</a>
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+        </header>
+        <!-- end of nav bar -->
+
+
+        {% block content %}
+
+        {% endblock %}
+
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+                crossorigin="anonymous">
+        </script>
+      </body>
+</html>

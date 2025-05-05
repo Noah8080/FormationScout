@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+  <div class="container">
+    <section>
+      <h2  style="text-align: center; font-weight: bold;" >The Empty Formation</h2>
+
+      <h3>What is the Pistol Formation?</h3>
+      <p>The <strong>Pistol Formation</strong> is a hybrid offensive alignment that combines elements of both the
+        traditional shotgun and under-center formations. In the pistol, the quarterback lines up about 3–4 yards
+        behind the center — closer than in a standard shotgun formation — with a running back directly behind the quarterback.
+        This setup allows the offense to blend quick passing plays with a strong downhill running game,
+        giving it incredible versatility.
+        First popularized byCoach Chris Ault at the University of Nevada in the mid-2000s,
+        the pistol has since made its way into both college and professional football.
+      </p>
+
+
+      {% load static %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <img src="{% static 'images/pistol_green.png' %}" class="img-fluid mb-3" alt="Annotated Pistol Formation 2">
+            <p class="text-center">The Diagram shows where positions are lined up in a traditional pistol formation.</p>
+            <p class="text-center">The annotated game image shows an in-game example.
+              Notice the HB is directly behind the QB, who is in shotgun behind the center.
+            </p>
+
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/pistolEX.jpeg' %}" class="img-fluid" alt="Annotated Pistol Formation">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>Key Features of the Pistol Formation</h3>
+      <ul>
+        <li><strong>Quarterback Depth:</strong> The QB stands closer to the line of scrimmage than in a shotgun, making handoffs quicker and making it easier to sell play-action fakes.</li>
+        <li><strong>Running Back Alignment:</strong> The RB lines up about <strong>2–3 yards</strong> directly behind the quarterback, allowing for a full-speed, downhill run.</li>
+        <li><strong>Balanced Attack:</strong> Teams can run a strong rushing attack or execute quick passes without tipping their hand pre-snap.</li>
+        <li><strong>Versatility for Mobile Quarterbacks:</strong> Ideal for option plays, read-options, RPOs, and bootlegs.</li>
+      </ul>
+    </section>
+
+    <section>
+        <h3>Pistol Variations</h3>
+        <p>The Pistol Formation has a couple variations that are tracked by the scout app, they both involve
+          putting an extra player in the backfield, most often a Fullback (FB). The extra FB are lined up on
+          either side of the QB to act as an extra blocker or player that could be handed the ball run. A FB
+          on one side of the QB is called a <strong>Pistol Strong</strong> and a FB lined up on both sides
+          of the QB is called a <strong>Pistol Full</strong>
+        </p>
+
+        <!-- display images for the two varients of the pistol formation -->
+        {% load static %}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-flex flex-column">
+              <figure>
+                <img src="{% static 'images/pistolstrongEX.jpeg' %}" class="img-fluid" alt="Annotated Pistol Strong Formation">
+                <figcaption style="text-align: center">The 'Strong' variant of the pistol Formation</figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure>
+                <img src="{% static 'images/pistolfullEX.jpeg' %}" class="img-fluid" alt="Annotated Pistol Full Formation">
+                <figcaption style="text-align: center">The 'Full' variant of the pistol Formation</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section>
+      <h3>Why Teams Use the Pistol</h3>
+      <p>The Pistol Formation solves a problem: it lets offenses keep a strong run threat <em>without</em>
+        forcing the quarterback to turn his back to the defense,
+        as he would in traditional under-center sets. This keeps the QB in a better position to read the defense,
+        especially for quick throws. <br>
+        This allows the offense to: </p>
+      <ul>
+        <li>Be unpredictable</li>
+        <li>Run a broader range of plays</li>
+        <li>Put extra pressure on linebackers and safeties</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Common Plays from the Pistol</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=jS3U_fGpkGg&ab_channel=WeeklySpiral" target="_blank">
+          <strong>Inside Zone Run:</strong></a>
+          A powerful downhill run that lets the RB hit the line of scrimmage quickly.
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=_WXKHRTSMm4&ab_channel=NFL" target="_blank">
+          <strong>Play-Action Pass:</strong></a>
+          Faking a handoff to set up deeper throws downfield.
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=9OIg5iRSFzg&ab_channel=TheQBSchool" target="_blank">
+          <strong>Bootlegs and Rollouts:</strong></a>
+          Getting the quarterback outside the pocket with run-pass options.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Final Thoughts</h3>
+      <p>The Pistol Formation is  about balance, speed, and unpredictability.
+        It blends the best parts of old-school power football with the modern spread passing game —
+        and when executed well, it can be difficult to defend.
+      </p>
+      <p>Whether you're a coach, player, or fan, understanding the pistol helps you see how today’s
+        offenses are evolving to stay one step ahead of the defense.
+      </p>
+    </section>
+  </div>
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,1 @@
+web gunicorn Formation_Scout.wsgi:application --log-file -

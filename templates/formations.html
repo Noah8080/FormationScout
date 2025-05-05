@@ -1,0 +1,173 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+  <div class="container">
+
+    <section>
+      <h2  style="text-align: center; font-weight: bold;" >Formations Hub</h2>
+
+      <h3>Introduction</h3>
+      <p>
+        Formation Scout is trained to indentify five different base offensive football formations
+        and smaller variants of some of them. These five base formations and their
+        variants can be found with more detail at that formation's page, although
+        a brief rundown will be given here. The formations used are focused only on backfield players and
+        not alignment of the line of scrimmage or wide receivers. More resources on offensive formations:
+        <a href="https://en.wikipedia.org/wiki/List_of_formations_in_American_football" target="_blank">
+          Wikipedia list of offensive formations</a>
+      </p>
+
+      <p>The five base formations used in this app:</p>
+      <ul>
+        <li><a href="{% url 'shotgun' %}">Shotgun</a></li>
+        <li><a href="{% url 'i' %}">I</a></li>
+        <li><a href="{% url 'pistol' %}">Pistol</a></li>
+        <li><a href="{% url 'empty' %}">Empty</a></li>
+        <li><a href="{% url 'singleback' %}">Singleback</a></li>
+      </ul>
+
+      <br>
+    </section>
+
+    <section>
+      <h3>The Position of the Quarterback</h3>
+      <p>
+        The <strong>Quarterback</strong> (QB) is the captain and play caller of the offense and it often the first to touch the ball
+        once it has been snapped by the <strong>Center</strong>, this action is what officially starts the play.
+        The QB can either line up crouched directly behind the center, known as "under center" or standing upright
+        a few yards the field behind the center in what is known as "shotgun". All the formations in this project
+        stem from one of these two positions.
+      </p>
+
+      <!-- display images for the two qb positions -->
+      {% load static %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <figure>
+              <img src="{% static 'images/qbundercenterEX.jpeg' %}"
+                   class="img-fluid" alt="Annotation of QB in under center">
+              <figcaption style="text-align: center"> <strong>Under Center</strong> <br>
+                The QB (marked red) is crouched directly behind the Center (marked pink) </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img src="{% static 'images/qbinshotgunEX.jpeg' %}" class="img-fluid" alt="Annotation of QB in shotgun">
+              <figcaption style="text-align: center"><strong>Shotgun</strong><br>
+                The QB is standing up a few yards behind the center (marked pink)</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+
+    <section>
+      <h3>Under Center Formations</h3>
+      <p>
+        The base under center formations have to do with the addition and position of other plays in the backfield
+        behind the quarterback. These players are often either <strong>Halfbacks</strong> (HB)
+        or <strong>Fullbacks</strong> (FB), determined by their size of intended use. <br>
+
+        The two under center formations
+        used here are the <Strong>I formation</Strong> and the <strong>Singleback formation</strong>.
+        The I formation has a FB lined up a couple yards behind the QB and then a HB lined up behind the QB.
+        The Singleback formation has only a HB lined up a few yards behind the QB and is often further back.
+      </p>
+
+      <!-- display images for the two under center formations -->
+      {% load static %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <figure>
+              <img src="{% static 'images/iformationEX.jpeg' %}"
+                   class="img-fluid" alt="Annotation of the I formation">
+              <figcaption style="text-align: center"> <strong>I Formation</strong> <br>
+                The RB (marked blue) is behind the FB (marked green), who is behind QB, who is under center </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img src="{% static 'images/singlebackEX.jpeg' %}" class="img-fluid" alt="Annotation of singleback formation">
+              <figcaption style="text-align: center"><strong>Singleback</strong><br>
+                The RB is several yards behind the under center QB is the only player other than the QB in the backfield</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    <br>
+    </section>
+
+
+    <section>
+      <h3>Shotgun Formations</h3>
+      <p>
+        The variants of shotgun formations have to do with the addition and position of other plays in the backfield
+        around the quarterback. These players are often either <strong>Halfbacks</strong> (HB)
+        or <strong>Fullbacks</strong> (FB), determined by their size of intended use. <br>
+
+        The shotgun formations
+        used here are the <Strong>Shotgun</Strong>(traditional), the <strong>Pistol</strong>, and <strong>Empty</strong>.
+        The traditional shotgun has a HB lined up on either side of the QB in the backfield. He can be either in line
+        with or slight behind the quarterback, but still off to the side.
+        The pistol has a HB lined up a couple yards behind the quarterback. The Empty formation has no other players in
+        the backfield with the QB. <br>
+        The first two below are both traditional shotgun formations as the depth of the RB in relation to the QB
+        is up to preference. What matters is that he is still close to and beside the QB, not directly behind.
+      </p>
+
+      <!-- display images for the two under center formations -->
+      {% load static %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <figure>
+              <img src="{% static 'images/shotgunEX.jpeg' %}"
+                   class="img-fluid" alt="Annotation of the shotgun formation">
+              <figcaption style="text-align: center"> <strong>Shotgun</strong> <br>
+                The RB is beside and slightly behind the QB, who is standing in shotgun</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img src="{% static 'images/shotgunEX2.jpeg' %}" class="img-fluid" alt="Annotation of shotgun formation">
+              <figcaption style="text-align: center"><strong>Shotgun</strong><br>
+                The RB is directly beside QB, who is standing in shotgun</figcaption>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <figure>
+              <img src="{% static 'images/pistolEX2.jpeg' %}"
+                   class="img-fluid" alt="Annotation of the pistol formation">
+              <figcaption style="text-align: center"> <strong>Pistol</strong> <br>
+                The RB is behind the QB, who is standing in shotgun</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img src="{% static 'images/emptyEX.jpeg' %}" class="img-fluid" alt="Annotation of empty formation">
+              <figcaption style="text-align: center"><strong>Shotgun</strong><br>
+                The QB, who is standing in shotgun, is the only player in the backfield</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <br>
+    </section>
+
+    <a href="#top">back to top</a>
+  </div>
+
+{% endblock %}

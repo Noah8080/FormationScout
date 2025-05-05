@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+  <div class="container">
+    <section>
+      <h2  style="text-align: center; font-weight: bold;" >The Singleback Formation</h2>
+
+      <h3>What is the Singleback Formation?</h3>
+      <p>The <strong>Singleback Formation</strong> is a versatile offensive alignment where the quarterback lines up under center,
+        and there is only one running back positioned several yards behind the quarterback — with no fullback.
+        By removing the fullback, the offense can spread out the defense with extra wide receivers or tight ends while still maintaining a strong running threat.
+        The Singleback became especially popular in the NFL during the late 1980s and early 1990s,
+        notably used by coaches like Joe Gibbs and Mike Shanahan to balance the passing and running game.
+      </p>
+
+
+      {% load static %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <img src="{% static 'images/singlebackEXgreen.png' %}" class="img-fluid mb-3" alt="Annotated Singleback Formation">
+            <p class="text-center">The Diagram shows where positions are lined up in a traditional pistol formation.</p>
+            <p class="text-center">The annotated game image shows an in-game example.
+              Notice the HB is several yards behind the QB, who is under center.
+            </p>
+
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/singlebackEX.jpeg' %}" class="img-fluid" alt="Annotated Singleback Formation">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>Key Features of the Singleback Formation</h3>
+      <ul>
+        <li><strong>Quarterback Under Center:</strong> The QB lines up directly behind the center, giving quicker access to handing off the ball or executing play-action.</li>
+        <li><strong>One Running Back:</strong> A lone running back lines up about 5–7 yards behind the quarterback, with no fullback in the backfield.</li>
+        <li><strong>Spread Possibilities:</strong> By eliminating the fullback, teams can bring extra receivers or tight ends onto the field, spreading the defense wider.</li>
+        <li><strong>Play-Action Threat:</strong> The formation is perfect for setting up convincing play-action passes that freeze linebackers and safeties.</li>
+      </ul>
+    </section>
+
+    <section>
+
+        <h3>Singleback Variations</h3>
+        <p>The Singleback Formation has several variations based on personnel and formation shifts.
+          Two common versions tracked by the scout app are <strong>Singleback Ace</strong> and <strong>Singleback Trips</strong>.
+          These variants either use multiple tight ends or overload one side of the formation with receivers. In the Ace
+          a receiver is added to both the top and bottom of the formation. In the Trips a combination of tight ends and
+          receivers are added to the same side of the line making a triangle shape.
+          This application only detects backfield formations and will not specify between the two.
+        </p>
+        <!-- display images for the two varients of the singleback formation -->
+        {% load static %}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-flex flex-column">
+              <figure>
+                <img src="{% static 'images/singlebackaceEX.jpeg' %}" class="img-fluid" alt="Annotated Singelback Ace Formation">
+                <figcaption style="text-align: center">The 'Ace' variant of the pistol Formation</figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure>
+                <img src="{% static 'images/singlebacktripsEX.jpeg' %}" class="img-fluid" alt="Annotated Singleback Trips Formation">
+                <figcaption style="text-align: center">The 'Trips' variant of the pistol Formation</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section>
+      <h3>Why Teams Use the Singleback</h3>
+      <p>The Singleback Formation offers the flexibility to maintain a strong running attack while deploying more threats in the passing game.
+        It allows offenses to:</p>
+      <ul>
+        <li>Keep defenses guessing between run and pass</li>
+        <li>Enhance protection with tight ends while still spreading the field</li>
+        <li>Use the entire width of the field for creative play designs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Common Plays from the Singleback</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=zFzJTAhdbXQ&ab_channel=AmericanFootballAcademy" target="_blank">
+          <strong>Outside Zone Run:</strong></a>
+          Stretching the defense horizontally before finding a crease.
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=_WXKHRTSMm4&ab_channel=NFL" target="_blank">
+          <strong>Play-Action Deep Shots:</strong></a>
+          Faking the run to create big-play opportunities downfield.
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=JXz-ca-uxgQ&ab_channel=CoachMagz" target="_blank">
+          <strong>Crossing Routes:</strong></a>
+          Using multiple crossing receivers to confuse defenders and create open passing lanes.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Final Thoughts</h3>
+      <p>The Singleback Formation is a fundamental part of many modern offenses because it blends power and finesse.
+         Its adaptability makes it an ideal choice whether a team wants to pound the rock, take deep shots, or dominate with play-action.
+      </p>
+      <p>For fans and players, understanding the Singleback reveals the strategic chess match that happens on every down in today’s football.</p>
+    </section>
+  </div>
+</body>
+
+
+{% endblock %}

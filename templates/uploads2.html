@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container" style="padding-top: 0.8em;">
+
+        <h2>Upload an Image</h2>
+        <p>For best result: Use clear images taken from the sideline. Ones from new EA football games work best.</p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+
+        {% if response_error %}
+            <div class="alert alert-danger" role="alert">
+                Error: Unable to fetch results due to issue with data sent from Roboflow
+            </div>
+        {% endif %}
+
+
+
+
+        <div class = "center_">
+            {% if result %}
+
+                {% if formation_class == "None" %}
+                    <p class="no_prediction">No formation was found</p>
+                {% else %}
+                    <p class="prediction">
+                        The formation is a <Strong>{{ formation_class }}</Strong> formation.
+                        prediction made with <strong>{{ confidence }}%</strong> confidence.
+                    </p>
+                {% endif %}
+
+            {% endif %}
+
+            {% if image %}
+                <img src="data:image/jpeg;base64,{{ image }}" alt="Predicted Image" style="max-width: 80%;" class="img-fluid">
+
+            {% endif %}
+        </div>
+        <br>
+
+        <!-- links to formation pages to match returned prediction -->
+        {% if formation_class == "Empty" %}
+        <p>Here is more information on the <a href="{% url 'empty' %}">Empty</a> formation.</p>
+        {% endif %}
+
+        {% if formation_class == "I_Formation" %}
+        <p>Here is more information on the <a href="{% url 'i' %}">I </a> formation.</p>
+        {% endif %}
+
+        {% if formation_class == "Pistol" %}
+        <p>Here is more information on the <a href="{% url 'pistol' %}">Pistol</a> formation.</p>
+        {% endif %}
+
+        {% if formation_class == "Shotgun" %}
+        <p>Here is more information on the <a href="{% url 'shotgun' %}">Shotgun</a> formation.</p>
+        {% endif %}
+
+        {% if formation_class == "Singleback" %}
+        <p>Here is more information on the <a href="{% url 'singleback' %}">Singlebacl</a> formation.</p>
+        {% endif %}
+
+
+
+    </div>
+
+
+<style>
+    .no_prediction {
+        color: #a94442; /* dark red */
+        background-color: #f2dede; /* light red background */
+        padding: 1em;
+        border: 0.1em solid #ebccd1;
+        border-radius: 5px;
+        font-weight: bold;
+        width: 15em;
+        text-align: center;
+
+    }
+    .prediction {
+        color: #3c763d; /* dark green */
+        background-color: #dff0d8; /* light green background */
+        padding: 1em;
+        border: 0.1em solid #d6e9c6;
+        border-radius: 5px;
+        font-weight: bold;
+        width: 45em;
+        text-align: center;
+    }
+    .center_ {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+  }
+
+</style>
+
+
+
+
+{% endblock %}
+

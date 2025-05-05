@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container" style="padding-top: 0.8em;">
+        <h3>This is the About page.</h3>
+        <a href="{% url 'home' %}">Home Page</a> <br>
+        <a href="{% url 'upload' %}">Upload Page</a>
+    </div>
+
+{% endblock %}
